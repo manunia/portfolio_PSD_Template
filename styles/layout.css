@@ -1,0 +1,79 @@
+@font-face {
+  font-family: SocialIco;
+  src: url(../fonts/Socialico.ttf);
+}
+@font-face {
+  font-family: Raleway;
+  src: url(../fonts/Raleway-Regular.ttf);
+}
+body {
+  margin: 0;
+  padding: 0;
+}
+.navbar {
+  margin-bottom: 0;
+  background: none;
+  border: none;
+}
+.navbar .container-fluid {
+  padding: 20px;
+}
+.navbar .container-fluid .navbar-header {
+  margin-left: 205px;
+  padding-left: 64px;
+  background: url("../images/logos.svg") no-repeat;
+}
+@media all and (min-width: 768px) and (max-width: 991px) {
+  .navbar .container-fluid .navbar-header {
+    margin-left: 59px;
+  }
+}
+@media all and (min-width: 480px) and (max-width: 767px) {
+  .navbar .container-fluid .navbar-header {
+    margin-left: 0;
+  }
+}
+@media all and (max-width: 479px) {
+  .navbar .container-fluid .navbar-header {
+    margin-left: 0;
+  }
+}
+.navbar .container-fluid .navbar-header button .navbar-toggle .collapsed {
+  margin-right: 27px;
+}
+.navbar .container-fluid .navbar-header a {
+  font-family: Raleway, sans-serif;
+  color: #ffffff;
+  font-size: 34px;
+  /* Приближение из-за подстановки шрифтов */
+  font-weight: 400;
+  text-align: right;
+}
+.navbar .container-fluid .navbar-header a:hover {
+  color: #c7b29a;
+  font-size: 36px;
+}
+.navbar .container-fluid .collapse ul {
+  margin-right: 137px;
+}
+@media all and (min-width: 992px) and (max-width: 1199px) {
+  .navbar .container-fluid .collapse ul {
+    margin-right: 0;
+  }
+}
+@media all and (min-width: 768px) and (max-width: 991px) {
+  .navbar .container-fluid .collapse ul {
+    margin-right: 33px;
+  }
+}
+.navbar .container-fluid .collapse ul li a {
+  font-family: Montserrat, sans-serif;
+  color: #ffffff;
+  font-size: 14px;
+  /* Приближение из-за подстановки шрифтов */
+  font-weight: 300;
+  text-align: left;
+}
+.navbar .container-fluid .collapse ul li a:hover {
+  color: #c7b29a;
+}

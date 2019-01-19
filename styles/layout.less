@@ -1,0 +1,75 @@
+@import "variable";
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.navbar{
+  margin-bottom: 0;
+  background: none;
+  border: none;
+
+  .container-fluid {
+    padding: 20px;
+
+    .navbar-header {
+      margin-left: 205px;
+      padding-left: 64px;
+      background: url("../images/logos.svg") no-repeat;
+
+      .respond-to(tablets; {
+        margin-left: 59px;
+      });
+
+      .respond-to(wide-phones; {
+        margin-left: 0;
+      });
+
+      .respond-to(phones; {
+        margin-left: 0;
+      });
+
+      button .navbar-toggle .collapsed {
+        margin-right: 27px;
+      }
+      a {
+        font-family: @font_ralevay;
+        color: #ffffff;
+        font-size: 34px; /* Приближение из-за подстановки шрифтов */
+        font-weight: 400;
+        text-align: right;
+      }
+      a:hover {
+        color: #c7b29a;
+        font-size: 36px;
+      }
+    }
+    .collapse {
+      ul {
+        margin-right: 137px;
+
+        .respond-to(small-desctops; {
+          margin-right: 0;
+        });
+
+        .respond-to(tablets; {
+          margin-right: 33px;
+        });
+
+        li {
+          a{
+            font-family: @font_monserrat;
+            color: #ffffff;
+            font-size: 14px; /* Приближение из-за подстановки шрифтов */
+            font-weight: 300;
+            text-align: left;
+          }
+          a:hover {
+            color: #c7b29a;
+          }
+        }
+      }
+    }
+  }
+}

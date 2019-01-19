@@ -1,0 +1,102 @@
+@dark_backgrnd: #191919;
+@light_backgrnd: white;
+
+@font-face {
+  font-family: SocialIco;
+  src: url(../fonts/Socialico.ttf);
+}
+
+@font-face {
+  font-family: Raleway;
+  src: url(../fonts/Raleway-Regular.ttf);
+}
+
+@font_ralevay: Raleway, sans-serif;
+@font_monserrat: Montserrat, sans-serif;
+
+.respond-to(@device, @content) {
+  & when (@device = phones) {
+    @media all and (max-width: 479px) { @content(); }
+  }
+  & when (@device = wide-phones) {
+    @media all and (min-width: 480px) and (max-width: 767px) { @content(); }
+  }
+  & when (@device = tablets) {
+    @media all and (min-width: 768px) and (max-width: 991px) { @content(); }
+  }
+  & when (@device = small-desctops) {
+    @media all and (min-width: 992px) and (max-width: 1199px) { @content(); }
+  }
+  & when (@device = lg-desctops) {
+    @media all and (min-width: 1200px) and (max-width: 1440px) { @content(); }
+  }
+  & when (@device = xlg-desctops) {
+    @media all and (min-width: 1441px) { @content(); }
+  }
+}
+
+.sectionHeaderMixin() {
+  font-family: @font_ralevay;
+  color:  #555555;
+  font-size: 30px;/* Приближение из-за подстановки шрифтов */
+  font-weight: 600;
+  text-align: center;
+  line-height: 100px;
+  margin-top: 60px;
+
+  .respond-to(wide-phones; {
+    line-height: 50px;
+  });
+
+  .respond-to(phones; {
+    line-height: 50px;
+  });
+}
+
+.articleMixin() {
+  font-family: @font_monserrat;
+  color: #8c8c8c;
+  font-size: 16px; /* Приближение из-за подстановки шрифтов */
+  font-weight: 300;
+  line-height: 28px; /* Приближение из-за подстановки шрифтов */
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.btnMixin() {
+  border-radius: 3px;
+  border: none;
+  background-color: #998675;
+  height: 53px;
+  margin-top: 54px;
+  padding: 14px 44px;
+  font-family: @font_ralevay;
+  color: #ffffff;
+  font-size: 14px; /* Приближение из-за подстановки шрифтов */
+  font-weight: 700;
+  line-height: 23px; /* Приближение из-за подстановки шрифтов */
+  text-align: center;
+  text-transform: uppercase;
+  box-shadow: 0 3px 0 0 #736357;
+
+  .respond-to(tablets; {
+    height: 30px;
+    font-size: 9px;
+    padding-top: 7px;
+  });
+
+  .respond-to(wide-phones; {
+    height: 30px;
+    font-size: 9px;
+    margin-top: 10px;
+    padding-top: 7px;
+  });
+
+  .respond-to(phones; {
+    height: 30px;
+    font-size: 9px;
+    margin-top: 10px;
+    padding-top: 7px;
+  });
+}
+
